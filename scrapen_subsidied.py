@@ -1,9 +1,5 @@
 import requests
-import bs4
-from bs4 import BeautifulSoup
 import pandas as pd
-import time
-import math
 import json
 import ast
 from requests_html import HTMLSession
@@ -16,8 +12,8 @@ def ophalen_subsidies(max):
         data = json.loads(page.text)
         data = str(data['results'])
         list.append(data)
+        print(pagina)
         print(data)
-        print(max)
     for i in range(0, len(list)):
         if i == 0:
             df = pd.DataFrame(ast.literal_eval(list[i]))
