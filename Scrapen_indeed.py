@@ -77,8 +77,8 @@ def data_ophalen(list):
             if gesponsord == '':
                 jobs.append(dict_vacature)
 
-        # Omzetten list met dictionairies in een dataframe
-        df = pd.DataFrame(jobs)
+    # Omzetten list met dictionairies in een dataframe
+    df = pd.DataFrame(jobs)
     return df
 
 
