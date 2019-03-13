@@ -7,7 +7,7 @@ from requests_html import HTMLSession
 
 def ophalen_subsidies(max):
     list = []
-    for pagina in range(1, max):
+    for pagina in range(1, max + 1):
         page = requests.get('https://subsidieregister.zuid-holland.nl/api/subsidies?jaar=&programmakey=&doelstellingkey=&regelingkey=&pageno=' + str(pagina) + '&sortdir=desc&minaangevraagdbedrag=0&maxaangevraagdbedrag=5000000&minverleendbedrag=0&maxverleendbedrag=5000000&sortfield=jaar&aanvragernaam=')
         data = json.loads(page.text)
         data = str(data['results'])
